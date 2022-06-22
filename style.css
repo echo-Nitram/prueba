@@ -1,0 +1,67 @@
+
+/* Para activar GRID, se aplica al contenedor padre */
+
+.grid-container{
+    display: grid;
+
+    /* definir filas */
+    grid-template-rows: 150px 150px 150px 150px; 
+        /* tres filas de 150 px */
+
+    /* definir columnas */
+        /* Fracciones -  1fr 1fr 1fr */
+
+    grid-template-columns: repeat(3, 1fr); /* 1fr  1fr 1fr */
+
+    border: solid 3px black;
+    background-color: blanchedalmond;
+
+    /* Areas */
+
+    grid-template-areas: 
+    'header header header'
+    'productos productos banner'
+    'productos prodcutos banner'
+    'footer footer footer';
+
+}
+
+
+
+.grid-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 3px black;
+    margin: 3px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.grid-item:hover{
+    background-color: beige;
+}
+
+
+.grid-item:first-child{
+
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+
+    grid-column: 1/3;
+
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+
+    grid-row: 1/3;
+
+    /* span - le dice al css que ocupe clumnas o filas */
+        /* grid-row: 1 / span 3; */
+
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+}
